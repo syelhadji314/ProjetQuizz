@@ -1,0 +1,20 @@
+{
+    "users":[
+        {
+            "nom":"Sy",
+            "prenom":"El Hadji",
+            "login":"joeur@gmail.com",
+            "password":"joeur",
+            "role":"ROLE_JOUEUR",
+            "score":15
+        },
+        {
+            "nom":"Diouf",
+            "prenom":"Mor ",
+            "login":"admin@gmail.com",
+            "password":"admin",
+            "role":"ROLE_ADMIN",
+            "score":0
+        }
+    ]
+}

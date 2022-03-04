@@ -22,7 +22,7 @@ input {
     box-sizing: border-box;
 }
 
-button {
+.btn {
     background-color: rgb(78, 144, 199);
     color: white;
     padding: 14px 20px;
@@ -32,7 +32,7 @@ button {
     width: 80%;
 }
 
-button:hover {
+.btn:hover {
     opacity: 0.8;
 }
 

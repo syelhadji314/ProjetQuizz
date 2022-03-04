@@ -3,8 +3,8 @@
         {
             "nom":"Sy",
             "prenom":"El Hadji",
-            "login":"joeur@gmail.com",
-            "password":"joeur",
+            "login":"joueur@gmail.com",
+            "password":"joueur",
             "role":"ROLE_JOUEUR",
             "score":15
         },

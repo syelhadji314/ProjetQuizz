@@ -3,6 +3,10 @@
 if(session_status() == PHP_SESSION_NONE){
     session_start();
 }
+// affichage des erreurs 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 //inclusion des constantes
 require_once dirname(dirname(__FILE__))."/config/constantes.php";

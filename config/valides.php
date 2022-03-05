@@ -7,14 +7,22 @@ string $message="Ce champ est obligatoire"){
 }
 function valid_email(string $key,string $data,array &$errors,
 string $message="email invalid"){
-    if(!filter_var($data,FILTER_VALIDATE_EMAIL)){
+    /* if(!filter_var($data,FILTER_VALIDATE_EMAIL)){
+        $errors[$key]=$message;
+    } */
+    $valide=preg_match('/\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/',$data);
+    if (!$valide) {
         $errors[$key]=$message;
     }
 }
-function valid_password(string $key, string $data, array &$errors, string $message = "mot de pass doit contenir au moins un chiffre un majuscule et un minuscule")
+function valid_password(string $key, string $data, array &$errors, string $message = "format mot de passe non valide")
 {
-    if (!( strlen($data) == 8 && contain_minuscul($data)&& contain_majuscule($data)) ) {
+    /* if (!( strlen($data) == 8 && contain_minuscul($data)&& contain_majuscule($data)) ) {
         $errors[$key] = $message;
+    } */
+    $valide=preg_match('/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/',$data);
+    if (!$valide) {
+        $errors[$key]=$message;
     }
 }
 //cette fonction permet de voir s'il ya une minuscule sur une chaine donnée

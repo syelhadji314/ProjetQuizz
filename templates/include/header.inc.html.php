@@ -9,3 +9,7 @@
     <title>QUIZ</title>
 </head>
 <body>
+    <div class="header">
+        <img src="<?=WEB_ROOT.'img'.DIRECTORY_SEPARATOR.'logo-QuizzSA.png'?>" alt="logo">
+        <h1>Le plaisir de jouer</h1>
+    </div>

@@ -4,7 +4,7 @@
             "nom":"Sy",
             "prenom":"El Hadji",
             "login":"joueur@gmail.com",
-            "password":"joueur",
+            "password":"joueur1",
             "role":"ROLE_JOUEUR",
             "score":15
         },
@@ -12,7 +12,7 @@
             "nom":"Diouf",
             "prenom":"Mor ",
             "login":"admin@gmail.com",
-            "password":"admin",
+            "password":"admin12",
             "role":"ROLE_ADMIN",
             "score":0
         }

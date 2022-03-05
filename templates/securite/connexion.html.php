@@ -1,17 +1,18 @@
 <?php
 require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.inc.html.php");
 if (isset($_SESSION[KEY_ERRORS])) {
-    $_SESSION[KEY_ERRORS]=$errors;
+    $errors = $_SESSION[KEY_ERRORS];
     unset($_SESSION[KEY_ERRORS]);
 }
 ?>
+<main>
     <form action="<?=PATH_POST?>" method="post">
     
         <div class="container">
 
         <!-- <h2>Login Form</h2> -->
-            <div class="imgcontainer">
-                <img src="<?=WEB_ROOT."img/loginIcon.png"?>" alt="Avatar" class="avatar">
+            <div class="headerContainer">
+                <h3>Login form</h3>
             </div>
             <input type="hidden" name="controlleur" value="securite">
             <input type="hidden" name="action" value="connexion">
@@ -29,10 +30,13 @@ if (isset($_SESSION[KEY_ERRORS])) {
             <?php if (isset($errors['password'])):?>
                 <p style="color: red"><?=$errors['password'];?></p>
             <?php endif?>
-                
+            <div class="btns">    
             <input type="submit" value="connexion" name="action" class="btn">
-        </div>    
+            <a href=""><input type="submit" name="signup" value="S'inscrire pour jouer" id="inscription"></a>
+            </div>
+        </div>
     </form>
+</main>
 <?php
 require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.inc.html.php");
 ?>

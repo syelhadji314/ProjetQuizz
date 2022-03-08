@@ -1,0 +1,27 @@
+.les_joueurs {
+    border: 2px solid rgb(105, 211, 238);
+    width: 50%;
+    border-radius: 10px;
+    /* padding-left: 20%; */
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    margin-bottom: 0.1em;
+}
+
+#score {
+    text-align: center;
+    margin-left: 10%;
+    color: rgb(124, 124, 81);
+}
+
+.pasi {
+    padding: 0.5em 2em;
+    background-color: rgb(29, 228, 195);
+    margin-left: 72%;
+    /* margin: 0.5em; */
+}
+
+span {
+    margin-left: 1em;
+}

@@ -1,12 +1,27 @@
 <?php
-    ///Recuperation des donnees du fichier
-function json_to_array(string $key):array{
-    $dataJson = file_get_contents(PATH_DB);
-    $data = json_decode($dataJson,true);
-    return $data[$key];
-    }
+// L'ORM est l'intermediare entre le model et la source de données
 
-    //Enregistrement et Mis a jour des donnees du fichier
-    function array_to_json(string $key,array $data):array{
-        return [];
-    }
+// cle dans notre fichier json
+function chaine_en_tableau(string $cle):array{
+// Recuperation du contenu de notre fichier Json dans l'orm
+$donnes=file_get_contents(DOSSIER_DATA);
+// Transformation des données ($donnes) en tableau 
+$tableau=json_decode($donnes,true);
+return $tableau[$cle];
+}
+
+
+// *************************************************************
+// Enregistrement et mis a jour des données du fichier
+function tableau_en_chaine(string $cle,array $newUser){
+$contenuJson=file_get_contents(DOSSIER_DATA);
+$data=json_decode($contenuJson,true);
+$data['user'][]=$newUser;
+$donneesFinal=json_encode($data,true);
+file_put_contents(DOSSIER_DATA,$donneesFinal);
+
+// return $chaine;
+}
+
+
+

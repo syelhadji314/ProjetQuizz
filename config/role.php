@@ -1,12 +1,25 @@
 <?php
-function is_connect():bool{
-    return isset($_SESSION[KEY_USER_CONNECT]);
+
+// GESTION DES AUTORISATTIONS
+define("ADMIN","PROFIL_ADMIN");
+define("JOUEUR","PROFIL_JOUEUR");
+// fonction pour recuperer les utilisateur connecter
+
+function is_connect(): bool{
+    return isset($_SESSION['user']);
+    
+}
+// var_dump($utilisateur);die;
+
+
+// Fonction pour verifier si l'utilisateur est un administrateur
+function Administrateur():bool{
+   return is_connect() && $_SESSION['user']['profil']==ADMIN;
+    
 }
 
-function is_joueur(){
-    return is_connect() && $_SESSION[KEY_USER_CONNECT]['role']=="ROLE_JOUEUR";
-}
 
-function is_admin(){
-    return is_connect() && $_SESSION[KEY_USER_CONNECT]['role']=="ROLE_ADMIN";
+function Joueur():bool{
+    return is_connect() && $_SESSION['user']['profil']==JOUEUR;
+    
 }

@@ -1,20 +1,180 @@
 {
-    "users":[
-        {
-            "nom":"Sy",
-            "prenom":"El Hadji",
-            "login":"joueur@gmail.com",
-            "password":"joueur1",
-            "role":"ROLE_JOUEUR",
-            "score":15
+    "user": [{
+            "nom": "Diallo",
+            "prenom": "Souleymane",
+            "login": "diallosouley337@gmail.com",
+            "password": "admin",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
         },
         {
-            "nom":"Diouf",
-            "prenom":"Mor ",
-            "login":"admin@gmail.com",
-            "password":"admin12",
-            "role":"ROLE_ADMIN",
-            "score":0
+            "nom": "Diallo",
+            "prenom": "Saifoulaye",
+            "login": "admin@gmail.com",
+            "password": "admin22",
+            "profil": "PROFIL_ADMIN",
+            "score": 0
+        },
+        {
+            "nom": "Gaye",
+            "prenom": "Moustapha",
+            "login": "mousta@gmail.com",
+            "password": "admin",
+            "profil": "PROFIL_ADMIN",
+            "score": 0
+        },
+        {
+            "nom": "Ba",
+            "prenom": "Mouhamed",
+            "login": "jouer@gmail.com",
+            "password": "jour123",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Ly",
+            "prenom": "Demba",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Faye",
+            "prenom": "Mouhamed",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Lo",
+            "prenom": "Mbaye",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Beye",
+            "prenom": "Mbaye",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Diom",
+            "prenom": "Lamine",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Mbaye",
+            "prenom": "Moustapha",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Diallo",
+            "prenom": "Aissatou",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Ka",
+            "prenom": "Omar",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Fall",
+            "prenom": "Modou",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Sene",
+            "prenom": "Adama",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Ndiaye",
+            "prenom": "Adama",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Thiam",
+            "prenom": "Karaw",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Dram\u00e9",
+            "prenom": "Ndiaga",
+            "login": "jouer@gmail.com",
+            "password": "jour",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "nom": "Ndiaye",
+            "prenom": "Mayacine",
+            "login": "jouer@gmail.com",
+            "password": "jouEur44",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        },
+        {
+            "prenom": "Souleymane",
+            "nom": "Ndiaye",
+            "login": "Souleymane",
+            "password": "aaa123",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15
+        }
+    ],
+    "questions": [{
+            "question": "Quel est meilleur language de programmation en 2022",
+            "a": "Java",
+            "b": "C",
+            "c": "Python",
+            "d": "javascrpt",
+            "correct": "a"
+        },
+        {
+            "question": "Qui est le premier president du s\u00e9n\u00e9gal",
+            "a": "Macky Sall",
+            "b": "Abdou Diouf",
+            "c": "Leopol  senghor",
+            "d": "Abdoulaye Wade",
+            "correct": "a"
+        },
+        {
+            "question": "Qui est Sadio man\u00e9 ",
+            "a": "Footballeur",
+            "b": "Chanteur",
+            "c": "Cultivateur",
+            "d": "informaticein",
+            "correct": "a"
         }
     ]
 }

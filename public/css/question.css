@@ -1,0 +1,55 @@
+.question {
+    border: 5px solid rgb(37, 216, 223);
+    padding: 0 3em 0 3em;
+    height: 83%;
+    border-radius: 25px;
+}
+
+.label-input,
+.label-inputs {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    margin-top: 2em;
+    font-size: 1.5em;
+}
+
+.label-input input,
+select,
+.lab-input {
+    background-color: rgba(255, 242, 242, 0.938);
+    padding: 2em;
+    border-bottom: 4px solid black;
+    border-right: 4px solid blue;
+    margin: 1em;
+}
+
+.label-inputs input {
+    background-color: rgba(255, 242, 242, 0.938);
+    padding: 2em 30em;
+    border-bottom: 4px solid blue;
+    border-right: 4px solid blue;
+}
+
+select {
+    padding: 2em 20em;
+    border-bottom: 4px solid blue;
+    border-right: 4px solid blue;
+}
+
+#Enregistrer {
+    float: right;
+    /* margin: 1em; */
+    margin-top: 1em;
+    background-color: rgb(37, 216, 223);
+    padding: 1em;
+    border-radius: 10px;
+    width: 10%;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+}
+
+option {
+    font-size: 1.5em;
+}

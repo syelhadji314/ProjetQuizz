@@ -1,0 +1,14 @@
+td,
+th {
+    font-size: 1.5em;
+    color: rgb(124, 113, 86);
+}
+
+.les_joueurs {
+    /* border: 2px solid blue; */
+    width: 20vw;
+    margin-left: 30%;
+    /* padding-left: 20em; */
+    /* display: flex;
+    flex-direction: column; */
+}

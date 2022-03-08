@@ -1,0 +1,103 @@
+.title h3 {
+    color: rgb(112, 112, 42);
+    margin: 0;
+}
+
+.title h2 {
+    color: gray;
+    margin: 0;
+}
+
+.title {
+    border-bottom: 2px solid rgb(112, 112, 42);
+    /* margin: 2em; */
+}
+
+.inscrire {
+    display: flex;
+    /* border: 3px solid red; */
+    height: 100vh;
+    justify-content: space-evenly;
+    /* margin: 2em; */
+    width: 70%;
+    margin-left: 15%;
+    background-color: white;
+    /* padding-bottom: 2em; */
+}
+
+.title-form {
+    /* border: 2px solid teal; */
+    width: 60%;
+    height: 45vw;
+}
+
+.identifiant {
+    /* border: 2px solid rebeccapurple; */
+    width: 30%;
+}
+
+#utlisateurs {
+    /* background-color: aqua; */
+    /* background-image: url('../img/img-bg.jpg'); */
+    background-size: cover;
+    /* padding-bottom: 3em; */
+    height: 75vh;
+}
+
+
+/* 
+input {
+    border: 2px solid rebeccapurple;
+} */
+
+
+/* .form {
+    margin: 2em;
+} */
+
+.logo-inscrit {
+    display: flex;
+    height: 18vh;
+    margin-left: 30%;
+    margin-top: 2em;
+    width: 10vw;
+    border-radius: 50%;
+    border: 9px solid rgb(23, 174, 194);
+}
+
+.identifiant h3 {
+    text-align: center;
+}
+
+input {
+    border: 2px solid rgb(196, 198, 209);
+    /* font-size: 3em; */
+}
+
+.fichier {
+    margin: 0em;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red;
+    width: 100%;
+}
+
+button {
+    /* padding: 0em 2em 0em 2em; */
+    width: 15vw;
+    height: auto;
+}
+
+.connect-inscrit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#validation {
+    /* background-color: brown; */
+    /* padding: 1em 2em 1em 2em; */
+}
+
+
+/* ***************************Creer question */

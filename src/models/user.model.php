@@ -16,18 +16,16 @@ function correspondance_login_password(string $login,string $password):array{
 }
 
 // ****************************Compte existant***************************
-function correspondance_login(string $login):array{
+function correspondance_login(string $cle,string $login,array &$errors, string $message="Le login existe dèja"){
         $users=chaine_en_tableau("user");
     // var_dump($users);die;
         foreach ($users as $user) {
             // s'il y'a une correspondance on a le user
             if( $user['login']==$login)
-            return $user;
+            $errors[$cle] = $message;
         }
-        return [];
-    }
-       
- 
+        
+}
 
 
 // Fonction pour lister les utilisateurs
@@ -40,9 +38,8 @@ function correspondance_login(string $login):array{
         $liste=[];
         foreach ($users as $user) {
             if ($user['profil']==$profil) {
-               $liste[]=$user;
+                $liste[]=$user;
             }
-           
         }
 return $liste;
     }
@@ -67,8 +64,22 @@ function userArray():array{
         'password'=>$_POST['password'],
         'profil'=>"PROFIL_JOUEUR",
         'score'=>15
-
     ];
-    return  $tab;
+    
+    $tabAdmin=[
+        'prenom'=>$_POST['prenom'],
+        'nom'=>$_POST['nom'],
+        'login'=>$_POST['login'],
+        'password'=>$_POST['password'],
+        'profil'=>"PROFIL_ADMIN",
+        'score'=>0
+    ];
+    if (Administrateur()) {
+        return  $tabAdmin;
+    }else
+    return $tab;
+    
 }
+
+
 

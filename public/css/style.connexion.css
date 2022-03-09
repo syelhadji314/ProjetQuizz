@@ -47,7 +47,7 @@ main {
 }
 
 .form {
-    padding: 30px 40px;
+    padding: 15px 40px;
     height: 30vh;
 }
 
@@ -57,9 +57,10 @@ main {
 }
 
 .form-controle {
-    margin-bottom: 9px;
+    /* margin-bottom: 2px; */
     padding-bottom: 20px;
     position: relative;
+    margin-top: -0.5em;
 }
 
 .form-controle label {

@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
 .title h3 {
     color: rgb(112, 112, 42);
     margin: 0;
@@ -9,14 +13,14 @@
 }
 
 .title {
+    padding-bottom: 1em;
     border-bottom: 2px solid rgb(112, 112, 42);
-    /* margin: 2em; */
+    margin-top: 5px;
 }
 
 .inscrire {
     display: flex;
-    /* border: 3px solid red; */
-    height: 100vh;
+    height: 83vh;
     justify-content: space-evenly;
     /* margin: 2em; */
     width: 70%;
@@ -37,23 +41,10 @@
 }
 
 #utlisateurs {
-    /* background-color: aqua; */
-    /* background-image: url('../img/img-bg.jpg'); */
     background-size: cover;
     /* padding-bottom: 3em; */
-    height: 75vh;
 }
 
-
-/* 
-input {
-    border: 2px solid rebeccapurple;
-} */
-
-
-/* .form {
-    margin: 2em;
-} */
 
 .logo-inscrit {
     display: flex;
@@ -70,15 +61,17 @@ input {
 }
 
 input {
-    border: 2px solid rgb(196, 198, 209);
+    border: 1px solid rgb(196, 198, 209);
+    height: 5vh;
     /* font-size: 3em; */
 }
 
 .fichier {
-    margin: 0em;
+    margin-top: -1.5em;
     display: flex;
     justify-content: space-between;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    height: 6vh;
     width: 100%;
 }
 
@@ -86,6 +79,8 @@ button {
     /* padding: 0em 2em 0em 2em; */
     width: 15vw;
     height: auto;
+    /* border: none; */
+    /* font-size: 1.5em; */
 }
 
 .connect-inscrit {
@@ -93,11 +88,25 @@ button {
     justify-content: space-between;
     align-items: center;
 }
+.btn-file {
+    background-color: transparent;
+    color: white;
+    margin-top: 2em;
+}
+label input{
+    border: none;
+    background-color: transparent;
+    margin-left: 19.5em;
+    font-size: 1.5em;
+}
+#password,
+#password2{
+    border: none;
 
-#validation {
-    /* background-color: brown; */
-    /* padding: 1em 2em 1em 2em; */
+}
+:hover #password,
+#password2{
+    border: solid #0eced4;
+
 }
 
-
-/* ***************************Creer question */

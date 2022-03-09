@@ -6,7 +6,7 @@
         
         $errors=$_SESSION['errors'];
 
-    unset($_SESSION['errors']);
+        unset($_SESSION['errors']);
 
     }
     ?>
@@ -33,8 +33,8 @@
                         <?php endif ?>
 
                 <div class="form-controle">
-                    <label for="utilisateur">Utilisateur</label>
-                    <input type="text" placeholder="votre email" id="email" name="login">
+                    <label for="utilisateur"></label>
+                    <input type="text" placeholder="votre email" id="email" name="login" value="<?php if(isset($_POST)) {echo $_POST['login'];} ?>">
                     <i class="fa-solid fa-user"></i>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="form-controle">
-                    <label for="utilisateur">Mot de passe</label>
+                    <label for="utilisateur"></label>
                     <input type="password" placeholder="votre mot de passe" name="password" id="password">
                     <i class="fa-solid fa-lock"></i>
                     <i class="fas fa-check-circle"></i>
@@ -65,7 +65,7 @@
                 </div>
             </form>
 
-            <!-- <script src="<?= DOSSIER_PUBLIC."js".DIRECTORY_SEPARATOR."script.connexion.js"?>"></script> -->
+            <script src="<?= DOSSIER_PUBLIC."js".DIRECTORY_SEPARATOR."script.connexion.js"?>"></script>
 
             <?php
                 require_once(DOSSIER_TEMPLATES."include".DIRECTORY_SEPARATOR."bas.inc.html.php");

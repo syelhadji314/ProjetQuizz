@@ -16,9 +16,12 @@ if (isset($_REQUEST['controleur'])) {
                 break;
         // Si le controleur n'existe pas on affiche le message d'erreur
         default:
-            echo("Le controleur n'est pas defini");
-            break;
+                // die("non connecter");
+                header("location:".WEB_ROOT);
+                exit();
+                break;
     }
+
 
 } else {
 

@@ -31,11 +31,11 @@ require_once(DOSSIER_SRC."models".DIRECTORY_SEPARATOR."user.model.php" );
             // echo("La requete est de type GET");
             if (isset($_REQUEST["action"])) {
                 // Vérification de la connexion de l'utilisateur avant l'action
-    if (!is_connect()) {
-        // die("non connecter");
-        header("location:".WEB_ROOT);
-        exit();
-    }
+            if (!is_connect()) {
+                // die("non connecter");
+                header("location:".WEB_ROOT);
+                exit();
+            }
 
             switch ( $_REQUEST["action"]) {
                 case 'accueil':

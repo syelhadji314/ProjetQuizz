@@ -27,31 +27,9 @@ function recuperer() {
 
 
 
-    // const valeurpassword2 = password2.value.trim()
     // *************************************************************************
-    if (valeurpassword === "") {
-        afficheErreur(password, "Veillez saisir votre password")
-            // alert("non");
-        valid = false;
-    } else {
-        valid = validMotPasse(password);
-    }
-    // ***************************************************************
-    if (valeurpassword2 === "") {
-        afficheErreur(password2, "Confirmer votre mot de passe")
-        valid = false
-    } else if (valeurpassword2 !== valeurpassword) {
-        afficheErreur(password2, "non identique au mot passe saisi")
-        valid = false;
+    
 
-    } else {
-        afficheSucess(password2);
-
-        // valid = validMotPasse(password2);
-
-    }
-
-    // // *****************************************************
     if (valeurPrenom === "") {
         // Appel de la class erreur
         afficheErreur(prenom, "Veillez donner votre prenom ");
@@ -60,7 +38,8 @@ function recuperer() {
         // Appel de la class succces
         afficheSucess(prenom)
     }
-    // *******************************************************
+    // ***************************************************************
+
     if (valeurnom === "") {
         // Appel de la class erreur
         afficheErreur(nom, "Veillez donner votre nom ")
@@ -71,19 +50,35 @@ function recuperer() {
         // Appel de la class succces
         afficheSucess(nom);
     }
-    // ***********************************************************
     if (valeurEmail === "") {
         afficheErreur(email, "Veillez saisir votre email")
         valid = false;
     } else {
+        afficheSucess(email);
         valid = ValidateEmail(email);
     }
+    // ***************************************************************
 
+    if (valeurpassword === "") {
+        afficheErreur(password, "Veillez saisir votre password")
+        valid = false;
+    } else {
+        afficheSucess(password);
+        valid = validMotPasse(password);
+    }
+    // ***************************************************************
+    if (valeurpassword2 ==="") {
+        afficheErreur(password2,"Confirmer votre mot de passe");
+        valid = false;
+    } else if (valeurpassword2 != valeurpassword) {
+        afficheErreur(password2, "non identique au mot passe saisi");
+        valid = false;
+
+    } else  {
+        afficheSucess(password2);
+        valid = validMotPasse(password2)
+    }
     return valid;
-    // ****************************************************************
-    // if (validMotPasse(password) == true && ValidateEmail(email) == true) {
-    //     return true;
-    // }
 
 }
 
@@ -103,11 +98,7 @@ function afficheErreur(input, message) {
 function afficheSucess(input) {
     const formControl = input.parentElement;
     formControl.className = 'form-controle succes';
-
-
-
 }
-
 
 // Fonction de validation de mail front
 function ValidateEmail(inputText) {
@@ -121,8 +112,6 @@ function ValidateEmail(inputText) {
         // email.focus();
         return false;
     }
-
-
 }
 
 
@@ -142,23 +131,18 @@ function validMotPasse(input) {
 
 }
 
-
-
-
-
-
 bouton2.addEventListener('click', (e) => {
         if (!recuperer()) {
             e.preventDefault();
         }
 
-    }
+}
+);
 
 
     // A vérifier sur le net
     // recuperer();
 
-);
 
 
 

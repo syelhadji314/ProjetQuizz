@@ -23,9 +23,17 @@
 }
 
 .btn {
-    padding: 2em 5em 2em 5em;
-    margin: 2em;
+    margin: 1.5em;
+    border: none;
+    background-color: transparent;
+
+}
+.btn #btna{
     background-color: rgb(41, 214, 206);
+    padding: 0.5em;;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
 }
 
 .profil {
@@ -103,7 +111,7 @@
     width: 8%;
 }
 
-.active,
+.formulaire .active,
 a:hover {
     background-color: rgb(211, 201, 201);
     border-left: 3px solid green;

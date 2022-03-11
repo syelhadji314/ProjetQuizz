@@ -16,36 +16,44 @@
     padding-bottom: 1em;
     border-bottom: 2px solid rgb(112, 112, 42);
     margin-top: 5px;
+    width: 90%;
 }
 
 .inscrire {
     display: flex;
-    height: 83vh;
-    justify-content: space-evenly;
+    height: 68vh;
+    /* justify-content: space-evenly; */
     /* margin: 2em; */
-    width: 70%;
+    width: 68%;
     margin-left: 15%;
     background-color: white;
+    box-sizing: border-box;
     /* padding-bottom: 2em; */
+}
+.div-inscrire{
+    width: 100%;
+    height: auto;
 }
 
 .title-form {
     /* border: 2px solid teal; */
     width: 60%;
     height: 45vw;
+    margin-left: 15%;
 }
 
 .identifiant {
-    /* border: 2px solid rebeccapurple; */
-    width: 30%;
+    margin-right: -9em;
+    width: 40%;
+    text-align: center;
 }
 
 #utlisateurs {
-    background-size: cover;
-    /* padding-bottom: 3em; */
+    width: 100%;
+    height: auto;
+    /* margin-top: 7em; */
+    padding: 0;
 }
-
-
 .logo-inscrit {
     display: flex;
     height: 18vh;
@@ -58,6 +66,7 @@
 
 .identifiant h3 {
     text-align: center;
+    margin-left: 5em;
 }
 
 input {
@@ -88,17 +97,7 @@ button {
     justify-content: space-between;
     align-items: center;
 }
-.btn-file {
-    background-color: transparent;
-    color: white;
-    margin-top: 2em;
-}
-label input{
-    border: none;
-    background-color: transparent;
-    margin-left: 19.5em;
-    font-size: 1.5em;
-}
+
 #password,
 #password2{
     border: none;
@@ -108,5 +107,10 @@ label input{
 #password2{
     border: solid #0eced4;
 
+}
+.form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 

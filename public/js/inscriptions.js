@@ -31,27 +31,30 @@ function recuperer() {
     
 
     if (valeurPrenom === "") {
+        // alert('okkkkk');
+
         // Appel de la class erreur
-        afficheErreur(prenom, "Veillez donner votre prenom ");
+        afficheErreur(prenom, "Veuillez saisir votre prenom ");
         valid = false;
     } else {
         // Appel de la class succces
-        afficheSucess(prenom)
+        // afficheSucess(prenom);
+            afficheSucess(prenom);
+            valid=true;
     }
     // ***************************************************************
 
     if (valeurnom === "") {
         // Appel de la class erreur
-        afficheErreur(nom, "Veillez donner votre nom ")
+        afficheErreur(nom, "Veuillez saisir votre nom ")
         valid = false;
-
-
     } else {
-        // Appel de la class succces
         afficheSucess(nom);
+        valid=true;
+        // Appel de la class succces
     }
     if (valeurEmail === "") {
-        afficheErreur(email, "Veillez saisir votre email")
+        afficheErreur(email, "Veuillez saisir votre email")
         valid = false;
     } else {
         afficheSucess(email);
@@ -79,7 +82,6 @@ function recuperer() {
         valid = validMotPasse(password2)
     }
     return valid;
-
 }
 
 // *******************************LES FONCTIONS********************************************
@@ -139,14 +141,7 @@ bouton2.addEventListener('click', (e) => {
 }
 );
 
-
-    // A vérifier sur le net
-    // recuperer();
-
-
-
-
-
-
-// A vérifier sur le net
-// recuperer();
+var loadFile = function(event) {
+    var image = document.getElementById("output");
+    image.src = URL.createObjectURL(event.target.files[0]);
+};

@@ -1,3 +1,4 @@
+
 .entete1 {
     background-color: rgb(20, 42, 42);
     color: white;
@@ -43,6 +44,9 @@
     /* color: white; */
     /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5pX 0 rgba(0, 0, 0, 0.24); */
 }
+.profil h1{
+    margin-top: 1.5em;
+}
 
 .formulaire {
     background-color: white;
@@ -67,8 +71,8 @@
     justify-content: center;
     justify-content: space-around;
     /* background-color: rgb(212, 206, 199); */
-    height: 98vh;
-    margin: 0em;
+    /* height: 98vh; */
+    margin: 0.5em;
     background-color: white;
     padding: 1em;
 }
@@ -89,13 +93,18 @@
 }
 
 .lister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     color: rgb(17, 8, 8);
     border: 9px solid rgb(238, 230, 230);
     width: 100%;
     border-radius: 20px;
     /* box-sizing: border-box; */
-    height: 80%;
+    height: 70%;
+    
     /* overflow: hidden; */
 }
 

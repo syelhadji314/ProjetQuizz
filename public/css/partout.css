@@ -1,6 +1,6 @@
 .les_joueurs {
     border: 2px solid rgb(105, 211, 238);
-    width: 50%;
+    width: auto;
     border-radius: 10px;
     /* padding-left: 20%; */
     display: flex;

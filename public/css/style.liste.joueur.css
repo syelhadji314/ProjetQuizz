@@ -1,14 +1,36 @@
 td,
-th {
+th,tr {
     font-size: 1.5em;
     color: rgb(124, 113, 86);
+    align-items: flex-start;
+    padding-left: 1em;
+
 }
 
 .les_joueurs {
-    /* border: 2px solid blue; */
-    width: 20vw;
-    margin-left: 30%;
-    /* padding-left: 20em; */
-    /* display: flex;
-    flex-direction: column; */
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: auto;
+}
+button{
+    background-color: aqua;
+    padding: 0.5em 0 0.5em 0;
+    /* margin-left: 12em; */
+}
+button a{
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+
+}
+.btn-pagination{
+    display: flex;
+    justify-content: space-around;
+}
+.les_joueurs table #titre{
+    margin: 0;
+    /* padding: 0; */
 }

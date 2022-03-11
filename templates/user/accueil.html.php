@@ -14,8 +14,15 @@
     <div class="icone-form">
 
         <div class="profil">
-            <img class="photo" src="<?= DOSSIER_PUBLIC."img".DIRECTORY_SEPARATOR."img-bg.jpg"?>" alt="PROFIL">
-            <h1>Souleymane</h1>
+            <?php if(!isset($_SESSION['user']['photo'])) :?>
+                <img class="photo" src="<?= DOSSIER_PUBLIC."img".DIRECTORY_SEPARATOR."img-bg.jpg"?>" alt="PROFIL">
+            <?php endif ?>
+            <?php if(isset($_SESSION['user']['photo'])) :?>
+                <img class="photo" src="<?= DOSSIER_PUBLIC."upload".DIRECTORY_SEPARATOR."$nameImg"?>" alt="PROFIL">
+            <?php endif ?>
+            <h1><?=$_SESSION['user']['prenom']?></h1>
+            <h1><?=$_SESSION['user']['nom']?></h1>
+
         </div>
 
         <div class="formulaire">

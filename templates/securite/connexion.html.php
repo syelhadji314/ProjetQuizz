@@ -20,7 +20,7 @@
                 <h2>X</h2>
             </div>
             
-            <form action="<?= WEB_ROOT?>" class="form" id="form" method="POST">
+            <form action="<?= WEB_ROOT?>" class="formUn" id="form" method="POST">
             <!-- Champ cachés -->
             <!-- Champ pour gerer le controleur -->
             <input type="hidden" name="controleur" value="securite">
@@ -55,13 +55,12 @@
                     <small>Message d'erreur</small>
                     <!-- Validation php -->
                     <?php if (isset($errors['password'])){?>
-                <p style="color:red"> <?=$errors['password']
-    ?></p>
-                <?php } ?>
+                    <p style="color:red"> <?=$errors['password']?></p>
+                    <?php } ?>
                 </div>
-               <div class=connect-inscrit>  
-                <button type="submit" id="bouton">Connexion</button>
-                <a class="inscrit" href="<?= WEB_ROOT."?controleur=securite&action=inscription" ?>">S'inscrire</a>
+                <div class=connect-inscrit>  
+                    <button type="submit" id="bouton">Connexion</button>
+                    <a class="inscrit" href="<?= WEB_ROOT."?controleur=securite&action=inscription" ?>">S'inscrire</a>
                 </div>
             </form>
 

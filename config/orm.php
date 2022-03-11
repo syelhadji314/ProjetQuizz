@@ -17,7 +17,7 @@ function tableau_en_chaine(string $cle,array $newUser){
 $contenuJson=file_get_contents(DOSSIER_DATA);
 $data=json_decode($contenuJson,true);
 $data['user'][]=$newUser;
-$donneesFinal=json_encode($data,true);
+$donneesFinal=json_encode($data, JSON_PRETTY_PRINT);
 file_put_contents(DOSSIER_DATA,$donneesFinal);
 
 // return $chaine;

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="<?= DOSSIER_PUBLIC."css".DIRECTORY_SEPARATOR."style.accueil.css"?>">
     <link rel="stylesheet" href="<?= DOSSIER_PUBLIC."css".DIRECTORY_SEPARATOR."style.liste.joueur.css"?>">
     <link rel="stylesheet" href="<?= DOSSIER_PUBLIC."css".DIRECTORY_SEPARATOR."inscription.user.css"?>">
-    <link rel="stylesheet" href="<?= DOSSIER_PUBLIC."css".DIRECTORY_SEPARATOR."partout.css"?>">
+    <!-- <link rel="stylesheet" href="<?= DOSSIER_PUBLIC."css".DIRECTORY_SEPARATOR."partout.css"?>"> -->
     <link rel="stylesheet" href="<?= DOSSIER_PUBLIC."css".DIRECTORY_SEPARATOR."question.css"?>">
 
 

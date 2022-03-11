@@ -1,6 +1,4 @@
 <?php
-
-
 // verification des donnees
 function correspondance_login_password(string $login,string $password):array{
     
@@ -51,11 +49,12 @@ return $liste;
         $Questions=chaine_en_tableau($cle);
         $liste=[];
         foreach ( $Questions as $question) {
-             $liste[]=$question;
-            }
+            $liste[]=$question;
+        }
 return $liste;
     }
     // ****************************************************************
+    
 function userArray():array{
     $tab=[
         'prenom'=>$_POST['prenom'],
@@ -63,7 +62,8 @@ function userArray():array{
         'login'=>$_POST['login'],
         'password'=>$_POST['password'],
         'profil'=>"PROFIL_JOUEUR",
-        'score'=>15
+        'score'=>15,
+        'photo'=>$_FILES['file']["name"]
     ];
     
     $tabAdmin=[
@@ -72,7 +72,8 @@ function userArray():array{
         'login'=>$_POST['login'],
         'password'=>$_POST['password'],
         'profil'=>"PROFIL_ADMIN",
-        'score'=>0
+        'score'=>0,
+        'photo'=>$_FILES['file']["name"]
     ];
     if (Administrateur()) {
         return  $tabAdmin;

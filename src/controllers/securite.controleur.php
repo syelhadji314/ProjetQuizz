@@ -12,6 +12,30 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
             $prenom=strip_tags(trim($_POST['prenom']));
             $nom=strip_tags(trim($_POST['nom']));
             $password2=strip_tags(trim($_POST['password2']));
+            if(is_connect()){
+                $profil='PROFIL_ADMIN';
+            }else{
+                $profil='PROFIL_JOUEUR';
+            }
+            // $profil=strtolower($_SESSION['user']['profil']);
+            /************upload_image********************* */
+            
+            $tmp=$_FILES['file']["tmp_name"];
+            $photo=$_FILES['file']["name"]; //renomer
+            $recupmail=explode('@',$login);
+            $recupmail=strtolower($recupmail[0]);
+            $recupmail=$recupmail."_".$profil;
+            $recup = explode('.',$photo );
+            $ext=strtolower(end($recup));
+            $nameImg=$recupmail.".".$ext;
+            // $mes_ext=['.jpg','.png','.jpeg','.gif'];
+            $chemin=RACINE."public".DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR.$recupmail.".".$ext;
+            // var_dump($chemin);die;
+            move_uploaded_file($tmp,$chemin);
+            /* if (in_array($ext,$mes_ext)) {
+            } */
+            
+            // uploadImage($file='file');
 
             switch ($_REQUEST["action"]) {
             case 'connexion':
@@ -52,10 +76,7 @@ if ($_SERVER["REQUEST_METHOD"]=="GET") {
             case 'deconnexion':
             // Fonctoin pour deconnecter l'utilisateur
                 deconnecter();
-
             break;
-
-            
                 default:
                 // die("non connecter");
                 header("location:".WEB_ROOT);
@@ -137,7 +158,8 @@ function inscription(string $nom,string $prenom, string $login, string $password
     champ_obligatoire('password2',$password2,$errors,$message="obligatoire");
     if (!isset($errors['password2'])){
         passwordNoMatch('password2',$password,$password2,$errors); 
-    } 
+    }
+    // uploadImage($file='file');
     if (count($errors)==0) {
         $result=userArray();
         tableau_en_chaine('user', $result);
@@ -153,3 +175,41 @@ function inscription(string $nom,string $prenom, string $login, string $password
         } 
     }
 }
+
+function uploadImage($file='file'){
+    $photo=$_FILES['file']["name"]."profile";
+    $tmp=$_FILES['file']["tmp_name"];
+    $ext = strtolower(substr(strrchr($photo, '.') ,1));
+    $mes_ext=['.jpg','.png','.jpeg','.gif'];
+    $chemin=RACINE."public".DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR.$photo;
+    // $target_file=$target_dir.basename($_FILES[$file]["name"]);
+
+    // ***********image-file*********************
+    if (empty($tmp)) {
+        $errors['avatar'] = "Ce fichier n'est pas une image.";
+    }
+    else {
+        //**********existence****************/
+        if (file_exists($chemin)) {
+            $errors['avatar'] = "Ce fichier existe déjà.";
+        } 
+        else {
+            //********taille_image*************/
+            if ($_FILES[$file]["size"] > 500000) {
+                $errors['avatar'] = "Ce fichier est trop large.";
+            } 
+            else {
+                /****************************format_image************************** */
+                if (!in_array($ext,$mes_ext)) {
+                    $errors['avatar'] = "choisseez une photo au bon format";
+                    
+                }else {
+                    //****************enregistrement_de_l_image*****************/
+                    move_uploaded_file($tmp, $chemin);
+                    return "true";
+                }
+            }
+        }
+    }
+}
+

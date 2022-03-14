@@ -82,5 +82,16 @@ function userArray():array{
     
 }
 
+function RecupQuestion(){
+$tabQuestion=[
+    'question'=>$_POST['question'],
+    'nbrePoint'=>$_POST['nbrePoint'],
+    'type'=>$_POST['type'],
+    'reponse'=>$_POST['reponse'],
+
+    
+];
+
+}
 
 

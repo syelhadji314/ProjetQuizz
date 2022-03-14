@@ -14,6 +14,9 @@ if (isset($_REQUEST['controleur'])) {
             case 'user':
                 require_once(DOSSIER_SRC."controllers".DIRECTORY_SEPARATOR."user.controleur.php");
                 break;
+            case 'question':
+                require_once(DOSSIER_SRC."controllers".DIRECTORY_SEPARATOR."question.controleur.php");
+                break;
         // Si le controleur n'existe pas on affiche le message d'erreur
         default:
                 // die("non connecter");

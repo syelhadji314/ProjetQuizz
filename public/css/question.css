@@ -5,11 +5,15 @@
     border-radius: 25px;
 }
 
-.label-input,
-.label-inputs {
+.label-input {
     display: flex;
     /* flex-direction: column; */
     justify-content: space-between;
+    margin-top: 2em;
+    font-size: 1.5em;
+}
+
+.label-inputs {
     margin-top: 2em;
     font-size: 1.5em;
 }

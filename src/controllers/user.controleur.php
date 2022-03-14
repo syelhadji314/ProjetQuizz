@@ -11,6 +11,7 @@
         if (isset($_REQUEST["action"])) {
             // L'action a executer
             $action=$_REQUEST["action"];
+            var_dump($action);die;
             switch ($action) {
                 case 'accueil':
                     require_once(DOSSIER_TEMPLATES."user".DIRECTORY_SEPARATOR."accueil.html.php");
@@ -127,7 +128,7 @@
     function Question(){
         // chargement temporaire du contenu d'un fichier
         ob_start();
-        require_once(DOSSIER_TEMPLATES."securite".DIRECTORY_SEPARATOR."creeQuestion.html.php");
+        require_once(DOSSIER_TEMPLATES."question".DIRECTORY_SEPARATOR."creeQuestion.html.php");
         $contenu_vues=ob_get_clean();
         require_once(DOSSIER_TEMPLATES."user".DIRECTORY_SEPARATOR."accueil.html.php");
     }

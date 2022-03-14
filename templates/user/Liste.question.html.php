@@ -8,7 +8,7 @@
                     </li>
 
                     <li>
-                        <input type="radio" name="reponse" class="reponse" id="b">
+                        <input type="checkbox" name="reponse" class="reponse" id="b">
                         <label for="b" id="reponse_b">reponse</label>
                     </li>
 

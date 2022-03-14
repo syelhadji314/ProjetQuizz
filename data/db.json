@@ -1,6 +1,5 @@
 {
-    "user": [
-        {
+    "user": [{
             "nom": "Diallo",
             "prenom": "Souleymane",
             "login": "diallosouley337@gmail.com",
@@ -373,30 +372,12 @@
             "photo": "COURS COMPLET HTML ET CSS [1-71] - Pre\u0301sentation du cours - YouTube.mp4"
         }
     ],
-    "questions": [
-        {
-            "question": "Quel est meilleur language de programmation en 2022",
-            "a": "Java",
-            "b": "C",
-            "c": "Python",
-            "d": "javascrpt",
-            "correct": "a"
-        },
-        {
-            "question": "Qui est le premier president du s\u00e9n\u00e9gal",
-            "a": "Macky Sall",
-            "b": "Abdou Diouf",
-            "c": "Leopol  senghor",
-            "d": "Abdoulaye Wade",
-            "correct": "a"
-        },
-        {
-            "question": "Qui est Sadio man\u00e9 ",
-            "a": "Footballeur",
-            "b": "Chanteur",
-            "c": "Cultivateur",
-            "d": "informaticein",
-            "correct": "a"
-        }
-    ]
+    "questions": [{
+        "question": "Quel est meilleur language de programmation en 2022",
+        "a": "Java",
+        "b": "C",
+        "c": "Python",
+        "d": "javascrpt",
+        "correct": "a"
+    }]
 }

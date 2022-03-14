@@ -95,17 +95,22 @@ main {
     visibility: hidden;
 }
 
-.form button {
+.formUn button {
     background-color: #0eced4;
-    /* border: 2px solid #c83510; */
     color: white;
     width: 30%;
-    /* display: block; */
     padding: 10px;
     font-size: 16px;
     font-family: inherit;
     border-radius: 4px;
     cursor: pointer;
+    border: none;
+}
+.formUn a {
+    text-decoration: none;
+    color: gray;
+    font-size: 1.5em;
+    margin-top: 1em;
 }
 
 .form-controle.succes input {
@@ -153,7 +158,7 @@ main {
 }
 
 #bouton {
-    margin: 1em;
+    margin-top: 1em;
 }
 
 input {

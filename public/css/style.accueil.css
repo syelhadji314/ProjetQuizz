@@ -120,11 +120,14 @@
     width: 8%;
 }
 
-.formulaire .active,
-a:hover {
+.formulaire a:hover {
     background-color: rgb(211, 201, 201);
     border-left: 3px solid green;
     /* padding: 0.5em; */
+}
+.formulaire .active {
+    background-color: rgb(211, 201, 201);
+    border-left: 3px solid green;
 }
 
 .logo {

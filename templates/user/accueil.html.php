@@ -1,8 +1,6 @@
 <!-- Layout ou page de présentation -->
 <?php 
     require_once(DOSSIER_TEMPLATES."include".DIRECTORY_SEPARATOR."haut.inc.html.php");
-    // require_once(DOSSIER_TEMPLATES."include".DIRECTORY_SEPARATOR."partout.php");
-    
 ?>
 <!-- ********************************** -->
 <div class="entete">
@@ -14,11 +12,12 @@
     <div class="icone-form">
 
         <div class="profil">
+            
             <?php if(!isset($_SESSION['user']['photo'])) :?>
                 <img class="photo" src="<?= DOSSIER_PUBLIC."img".DIRECTORY_SEPARATOR."img-bg.jpg"?>" alt="PROFIL">
             <?php endif ?>
             <?php if(isset($_SESSION['user']['photo'])) :?>
-                <img class="photo" src="<?= DOSSIER_PUBLIC."upload".DIRECTORY_SEPARATOR."$nameImg"?>" alt="PROFIL">
+                <img class="photo" src="<?= DOSSIER_PUBLIC."upload".DIRECTORY_SEPARATOR.$_SESSION['user']['photo']?>" alt="PROFIL">
             <?php endif ?>
             <h1><?=$_SESSION['user']['prenom']?></h1>
             <h1><?=$_SESSION['user']['nom']?></h1>

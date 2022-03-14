@@ -1,82 +1,58 @@
-const quiz = document.getElementById('quiz')
-const reponses = document.querySelectorAll('.reponse')
-const questions = document.getElementById('question')
+const typeQuestion = document.getElementById("typeQuestion");
+const typeRep = document.getElementById("typeRep");
+const reponse = document.getElementById("reponse");
+const supprime = document.getElementById("supprime");
+const reponseFinal = document.getElementById("reponseFinal");
+const repCheck = document.getElementById("repCheck");
+const repText = document.getElementById("repText");
+const image = "/img/icones/ic-supprimer.png";
 
+// **************************AJOUTER***********************************
+typeRep.onclick = function() {
+    var newDiv = document.createElement("div");
+    newDiv.setAttribute("class", "reponse");
+    // newDiv.setAttribute("", "reponse");
 
-const reponse_a = document.getElementById('reponse_a')
-const reponse_b = document.getElementById('reponse_b')
-const reponse_c = document.getElementById('reponse_c')
-const reponse_d = document.getElementById('reponse_d')
-const btnSubmit = document.getElementById('submit')
+    reponseFinal.appendChild(newDiv);
+    // *************************************
+    var newInput = document.createElement("input");
+    newInput.setAttribute("type", "text");
+    newInput.setAttribute("name", "text");
+    newInput.setAttribute("class", "repText");
+    // ********************************
+    var newCheck = document.createElement("input");
+    newCheck.setAttribute("type", "checkbox");
+    newCheck.setAttribute("name", "checkbox");
+    newCheck.setAttribute("class", "repCheck ");
+    // **********************************
+    var newRadio = document.createElement("input");
+    newRadio.setAttribute("type", "radio");
+    newRadio.setAttribute("name", "radio");
+    newRadio.setAttribute("class", "repRadio");
+    // **************************************
+    var img = document.createElement("img");
+    img.setAttribute("src", image);
+    img.setAttribute("class", "ajout");
+    // **************************
 
-
-
-
-//*************************************************** */
-let reponseCorrect = 0
-let scort = 0
-    //Chargement Question
-loadQuiz()
-
-function loadQuiz() {
-    deselectReponses()
-    const tableauReponse = TabQuestion[reponseCorrect]
-
-
-    questions.innerText = tableauReponse.question
-    reponse_a.innerText = tableauReponse.a
-    reponse_b.innerText = tableauReponse.b
-    reponse_c.innerText = tableauReponse.c
-    reponse_d.innerText = tableauReponse.d
-
-}
-// ***************************************************************
-
-function deselectReponses() {
-    reponses.forEach(reponse => reponse.checked = false);
-
-}
-
-
-// ****************************************************************
-function getSelect() {
-    // console.log('hello');
-
-    let reponse
-    reponses.forEach(maReponse => {
-        if (maReponse.checked) {
-
-            reponse = maReponse.id
-
-        }
-
-    })
-
-    return reponse;
-}
-
-
-btnSubmit.addEventListener('click', () => {
-    const reponse = getSelect()
-    if (reponse) {
-        // *******************************************
-        if (reponse === TabQuestion[reponseCorrect].correct) {
-            scort++
-        }
-        reponseCorrect++
-        if (reponseCorrect < TabQuestion.length) {
-            loadQuiz()
-
-        } else {
-
-            quiz.innerHTML = `
-            <h2>you response ${scort}/${TabQuestion.length} questions correctes .</h2>
-
-
-            <button onclick="location.reload()">Rejouer</button>
-            `
-        }
-
+    newDiv.appendChild(newInput);
+    var question = typeQuestion.value;
+    switch (question) {
+        case "1":
+            // newDiv.appendChild(newInput);
+            newDiv.appendChild(newCheck);
+            break;
+        case "2":
+            // newDiv.appendChild(newInput);
+            newDiv.appendChild(newRadio);
+            break;
     }
+    newDiv.appendChild(img);
+    img.onclick = function() {
+        // alert("okkkkk")
+        newDiv.parentElement.removeChild(newDiv);
+    }
+};
 
-})
+
+// ******************************SUPPRIMER*********************

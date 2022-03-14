@@ -193,72 +193,9 @@
             "score": 15
         },
         {
-            "prenom": "Mor",
-            "nom": "Diouf",
-            "login": "joueur@gmail.cn",
-            "password": "darou1",
-            "profil": "PROFIL_JOUEUR",
-            "score": 15,
-            "photo": null
-        },
-        {
-            "prenom": "Mor",
-            "nom": "BA",
-            "login": "admin@gmail.cv",
-            "password": "darou1",
-            "profil": "PROFIL_JOUEUR",
-            "score": 15,
-            "photo": null
-        },
-        {
-            "prenom": "Samba",
-            "nom": "SY",
-            "login": "elhadji@gmail.com",
-            "password": "samba1",
-            "profil": "PROFIL_JOUEUR",
-            "score": 15,
-            "photo": null
-        },
-        {
-            "prenom": "Baba",
-            "nom": "fall",
-            "login": "baba@gmail.com",
-            "password": "baba12",
-            "profil": "PROFIL_JOUEUR",
-            "score": 15,
-            "photo": null
-        },
-        {
             "prenom": "EL HADJI",
             "nom": "SY",
             "login": "hhhadmin@gmail.com",
-            "password": "mmmmmm1",
-            "profil": "PROFIL_JOUEUR",
-            "score": 15,
-            "photo": "bigstock-Hacker-Using-Laptop-With-Binar-257453926.jpg"
-        },
-        {
-            "prenom": "EL HADJI",
-            "nom": "SY",
-            "login": "adminjjjj@gmail.com",
-            "password": "mmmmmm1",
-            "profil": "PROFIL_JOUEUR",
-            "score": 15,
-            "photo": "blocd'alimention.jpg"
-        },
-        {
-            "prenom": "EL HADJI",
-            "nom": "SY",
-            "login": "adminllm@gmail.com",
-            "password": "mmmmmm1",
-            "profil": "PROFIL_JOUEUR",
-            "score": 15,
-            "photo": "Capture d\u2019\u00e9cran de 2022-03-09 21-12-37.png"
-        },
-        {
-            "prenom": "EL HADJI",
-            "nom": "SY",
-            "login": "admin@mmgmail.com",
             "password": "mmmmmm1",
             "profil": "PROFIL_JOUEUR",
             "score": 15,
@@ -283,37 +220,10 @@
             "photo": "Capturetp8.png"
         },
         {
-            "prenom": "EL HADJ",
-            "nom": "dert",
-            "login": "admin@gma.com",
-            "password": "44444r",
-            "profil": "PROFIL_JOUEUR",
-            "score": 15,
-            "photo": "mysql-apt-config_0.8.12-1_all.deb"
-        },
-        {
-            "prenom": "Mouhamed ",
-            "nom": "SY",
-            "login": "admin@gmail.ch",
-            "password": "zzzzz1",
-            "profil": "PROFIL_ADMIN",
-            "score": 0,
-            "photo": "processeur.jpeg"
-        },
-        {
             "prenom": "Mor",
             "nom": "Diouf",
             "login": "admin@gmail.col",
             "password": "ddddd1",
-            "profil": "PROFIL_JOUEUR",
-            "score": 15,
-            "photo": "ram.jpeg"
-        },
-        {
-            "prenom": "Mbaye",
-            "nom": "LO",
-            "login": "admin@gmai.com",
-            "password": "zzzzz1",
             "profil": "PROFIL_JOUEUR",
             "score": 15,
             "photo": "ram.jpeg"
@@ -434,6 +344,33 @@
             "profil": "PROFIL_JOUEUR",
             "score": 15,
             "photo": "Capturetp3.png"
+        },
+        {
+            "prenom": "Modou",
+            "nom": "fall",
+            "login": "modoufall@gmail.com",
+            "password": "aaaaa1",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15,
+            "photo": "221783123657_status_4973ec9892054aa2a57d7ae13e33f56c.jpg"
+        },
+        {
+            "prenom": "EL HADJI",
+            "nom": "Diouf",
+            "login": "elhadjisy314@gmail.com",
+            "password": "aaaaaa1",
+            "profil": "PROFIL_ADMIN",
+            "score": 0,
+            "photo": "Screenshot_2020-04-01-21-44-15.png"
+        },
+        {
+            "prenom": "EL HADJ",
+            "nom": "SY",
+            "login": "ad@gmail.com",
+            "password": "aaaaa1",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15,
+            "photo": "COURS COMPLET HTML ET CSS [1-71] - Pre\u0301sentation du cours - YouTube.mp4"
         }
     ],
     "questions": [

@@ -28,13 +28,12 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
             $recup = explode('.',$photo );
             $ext=strtolower(end($recup));
             $nameImg=$recupmail.".".$ext;
-            // $mes_ext=['.jpg','.png','.jpeg','.gif'];
+            $mes_ext=['jpg','png','jpeg','gif'];
             $chemin=RACINE."public".DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR.$recupmail.".".$ext;
-            // var_dump($chemin);die;
             move_uploaded_file($tmp,$chemin);
-            /* if (in_array($ext,$mes_ext)) {
-            } */
-            
+
+            // var_dump($chemin);die;
+        
             // uploadImage($file='file');
 
             switch ($_REQUEST["action"]) {
@@ -158,7 +157,8 @@ function inscription(string $nom,string $prenom, string $login, string $password
     champ_obligatoire('password2',$password2,$errors,$message="obligatoire");
     if (!isset($errors['password2'])){
         passwordNoMatch('password2',$password,$password2,$errors); 
-    }
+    } 
+    
     // uploadImage($file='file');
     if (count($errors)==0) {
         $result=userArray();

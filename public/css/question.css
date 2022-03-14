@@ -19,22 +19,24 @@ select,
 .lab-input {
     background-color: rgba(255, 242, 242, 0.938);
     padding: 2em;
-    border-bottom: 4px solid black;
-    border-right: 4px solid blue;
+    border-bottom: 4px solid rgb(37, 216, 223);
+    border-right: 4px solid rgb(37, 216, 223);
     margin: 1em;
+    /* height: 1em; */
 }
 
 .label-inputs input {
     background-color: rgba(255, 242, 242, 0.938);
     padding: 2em 30em;
-    border-bottom: 4px solid blue;
-    border-right: 4px solid blue;
+    border-bottom: 4px solid rgb(37, 216, 223);
+    border-right: 4px solid rgb(37, 216, 223);
 }
 
 select {
     padding: 2em 20em;
-    border-bottom: 4px solid blue;
-    border-right: 4px solid blue;
+    border-bottom: 4px solid rgb(37, 216, 223);
+    border-right: 4px solid rgb(37, 216, 223);
+    /* height: 1em; */
 }
 
 #Enregistrer {
@@ -50,6 +52,59 @@ select {
     color: white;
 }
 
-option {
+select option {
+    font-size: 1em;
+}
+
+.nombre {
     font-size: 1.5em;
+}
+
+
+/* *************************Paramatre des reponses*************************************** */
+
+.repText {
+    background-color: rgba(255, 242, 242, 0.938);
+    padding: 2em;
+    border-bottom: 4px solid rgb(37, 216, 223);
+    border-right: 4px solid rgb(37, 216, 223);
+    margin: 1em;
+    width: 70%;
+    height: 1em;
+}
+
+.repCheck {
+    width: 30px;
+    height: 30px;
+    /* margin-top: 3em; */
+}
+
+.repRadio {
+    width: 30px;
+    height: 30px;
+}
+
+.reponse {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ajout {
+    width: 45px;
+    height: 45px;
+    /* margin-top: 1em; */
+}
+
+.ajout1 {
+    width: 45px;
+    height: 45px;
+    margin-top: 1em;
+}
+
+.CreeQuizz {
+    color: rgb(37, 216, 223);
+    font-weight: bold;
+    text-align: center;
 }

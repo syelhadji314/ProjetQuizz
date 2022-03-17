@@ -63,7 +63,7 @@ function userArray():array{
         'password'=>$_POST['password'],
         'profil'=>"PROFIL_JOUEUR",
         'score'=>15,
-        'photo'=>$_FILES['file']["name"]
+        'photo'=>$_FILES['monfichier']["name"]
     ];
     
     $tabAdmin=[
@@ -73,7 +73,7 @@ function userArray():array{
         'password'=>$_POST['password'],
         'profil'=>"PROFIL_ADMIN",
         'score'=>0,
-        'photo'=>$_FILES['file']["name"]
+        'photo'=>$_FILES['monfichier']["name"]
     ];
     if (Administrateur()) {
         return  $tabAdmin;
@@ -82,16 +82,16 @@ function userArray():array{
     
 }
 
-function RecupQuestion(){
+function RecupQuestion():array{
 $tabQuestion=[
     'question'=>$_POST['question'],
     'nbrePoint'=>$_POST['nbrePoint'],
     'type'=>$_POST['type'],
-    'reponse'=>$_POST['reponse'],
-
+    'reponse'=>$_POST['text'],
+    "Correct"=>$_POST['rep']
     
 ];
-
+ return $tabQuestion;
 }
 
 

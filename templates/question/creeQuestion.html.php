@@ -41,7 +41,7 @@
         <img class="ajout1" src="<?= DOSSIER_PUBLIC."img".DIRECTORY_SEPARATOR."icones".DIRECTORY_SEPARATOR."ic-ajout-réponse.png"?>" alt="PROFIL" id="typeRep">
         
     </div>
-     
+    
     <div id="reponseFinal">
         
     </div>

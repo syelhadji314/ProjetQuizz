@@ -1,5 +1,6 @@
 {
-    "user": [{
+    "user": [
+        {
             "nom": "Diallo",
             "prenom": "Souleymane",
             "login": "diallosouley337@gmail.com",
@@ -9,11 +10,12 @@
         },
         {
             "nom": "Diallo",
-            "prenom": "Saifoulaye",
+            "prenom": "Souleymane",
             "login": "admin@gmail.com",
             "password": "admin22",
             "profil": "PROFIL_ADMIN",
-            "score": 0
+            "score": 0,
+            "photo": "moi.jpg"
         },
         {
             "nom": "Gaye",
@@ -370,14 +372,104 @@
             "profil": "PROFIL_JOUEUR",
             "score": 15,
             "photo": "COURS COMPLET HTML ET CSS [1-71] - Pre\u0301sentation du cours - YouTube.mp4"
+        },
+        {
+            "prenom": "diama",
+            "nom": "diama",
+            "login": "diama@gmail.com",
+            "password": "aaa123",
+            "profil": "PROFIL_ADMIN",
+            "score": 0,
+            "photo": null
+        },
+        {
+            "prenom": "gaga",
+            "nom": "gaga",
+            "login": "gaga@gmail.com",
+            "password": "aaa123",
+            "profil": "PROFIL_JOUEUR",
+            "score": 15,
+            "photo": "moi.jpg"
+        },
+        {
+            "prenom": "fafa",
+            "nom": "fafa",
+            "login": "fafa@gmai.com",
+            "password": "aaa123",
+            "profil": "PROFIL_ADMIN",
+            "score": 0,
+            "photo": "moi.jpg"
+        },
+        {
+            "prenom": "omo",
+            "nom": "omo",
+            "login": "omo@gmail.com",
+            "password": "aaa123",
+            "profil": "PROFIL_ADMIN",
+            "score": 0,
+            "photo": "goup1.png"
+        },
+        {
+            "question": "Independance du senegal",
+            "nbrePoint": "20",
+            "type": "typeMultiple",
+            "reponse": null,
+            "0": [
+                "on",
+                "on"
+            ]
         }
     ],
-    "questions": [{
-        "question": "Quel est meilleur language de programmation en 2022",
-        "a": "Java",
-        "b": "C",
-        "c": "Python",
-        "d": "javascrpt",
-        "correct": "a"
-    }]
+    "questions": [
+        {
+            "question": "Les langages Web",
+            "nbrePoint": "20",
+            "type": "typeMultiple",
+            "reponse": [
+                "HTML",
+                "JAVASCRIPT",
+                "WORDPRESS"
+            ],
+            "Correct": [
+                "HTML",
+                "JAVASCRIPT"
+            ]
+        },
+        {
+            "question": "D\u2019 o\u00f9 vient le Corona?",
+            "nbrePoint": "10",
+            "type": "typeSimple",
+            "reponse": [
+                "Italy",
+                "Chine"
+            ],
+            "Correct": [
+                "Chine"
+            ]
+        },
+        {
+            "question": "Les pr\u00e9curseurs de la r\u00e9volution digitale",
+            "nbrePoint": "25",
+            "type": "typeSimple",
+            "reponse": [
+                "GAFAM",
+                "CI A- FBI"
+            ],
+            "Correct": [
+                "GAFAM"
+            ]
+        },
+        {
+            "question": "Quelle est la premi\u00e8re \u00e9cole de codage gratuit  au S\u00e9n\u00e9gal ?",
+            "nbrePoint": "15",
+            "type": "typeSimple",
+            "reponse": [
+                "Simplon",
+                "Orange Digital Center"
+            ],
+            "Correct": [
+                "Simplon"
+            ]
+        }
+    ]
 }

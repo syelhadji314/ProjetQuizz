@@ -16,8 +16,13 @@ unset($_SESSION['errors']);
         <div class="title-form">
             <div class="title">
                 <h2>S'INSCRIRE</h2>
+                <?php if (Administrateur()) {
+                   echo'Pour proposer vos quizz';
+                }
+                else {
+                    echo'<h3>Pour tester votre niveau de culture générale</h3>';
+                }?>
                 
-                <h3>Pour tester votre niveau de culture générale</h3>
             </div>
             <form action="<?= WEB_ROOT?>" method="POST" class="form" enctype="multipart/form-data">
                 <div class="div-inscrire">
@@ -101,9 +106,15 @@ unset($_SESSION['errors']);
                     <label for="file">
                         <img class="logo-inscrit" src="<?= DOSSIER_PUBLIC."img".DIRECTORY_SEPARATOR."jul.jpg"?>" alt="PROFIL" style="cursor: pointer;" id="output" enctype="multipart/form-data">
                     </label>
-                    <input style="display: none;" type="file" id="file" accept="image/*" name="file" onchange="loadFile(event)"/>
+                    <input style="display: none;" type="file" id="file" accept="image/*" name="monfichier" onchange="loadFile(event)"/>
                     <!-- </label> -->
-                    <h3>Avatar du joueur</h3>
+                    <?php if (Administrateur()) {
+                        echo" <h3>Avatar de l'admin</h3>";
+                    }
+                    else {
+                        echo" <h3>Avatar du joueur</h3>";
+                    }?>
+                   
                     <?php if(!empty($errors['file'])){?>
                         <small style="color: red"><?=$errors['file']?></small>
                     <?php } ?>

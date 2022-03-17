@@ -10,9 +10,9 @@
         <!-- PHP -->
         <?php foreach ($donnees as $valeur):?>
             <tr>
-            <td><?= $valeur['nom']?></td>
-            <td><?= $valeur['prenom']?></td>
-            <td><?= $valeur['score']?><span>pts</span></td>
+                <td><?= $valeur['nom']?></td>
+                <td><?= $valeur['prenom']?></td>
+                <td><?= $valeur['score']?><span>pts</span></td>
             </tr>
         <?php endforeach ?>
     </table>

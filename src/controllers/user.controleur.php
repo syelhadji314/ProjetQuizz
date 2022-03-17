@@ -82,9 +82,8 @@
         // Appel du model
         $donnees=listeDesUtilisateurs("PROFIL_JOUEUR");
         // appelle fonction pagination
-        pagination (10, $donnees);
-        $donnees=pagination (10, $donnees);
-        /* $page = (!empty($_GET['page']) && $_GET['page'] > 0) ? intval($_GET['page']) : 1;
+        
+        $page = (!empty($_GET['page']) && $_GET['page'] > 0) ? intval($_GET['page']) : 1;
 
         $limit = 10;
         $totalPages = ceil(count($donnees) / $limit);
@@ -95,7 +94,7 @@
         $offset = ($page - 1) * $limit;
         $offset = ($offset < 0) ? 0 : $offset;
 
-        $donnees = array_slice($donnees, $offset, $limit); */
+        $donnees = array_slice($donnees, $offset, $limit); 
         // Chargement de la vue
         require_once(DOSSIER_TEMPLATES."user".DIRECTORY_SEPARATOR."Liste.joueurs.html.php");
         $contenu_vues=ob_get_clean();

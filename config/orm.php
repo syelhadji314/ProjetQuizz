@@ -22,6 +22,13 @@ file_put_contents(DOSSIER_DATA,$donneesFinal);
 
 // return $chaine;
 }
-
+// ********************************************
+function tableau_en_chaine_question(string $cle,array $newQuestion){
+    $contenuJson=file_get_contents(DOSSIER_DATA);
+    $data=json_decode($contenuJson,true);
+    $data['questions'][]=$newQuestion;
+    $donneesFinal=json_encode($data, JSON_PRETTY_PRINT);
+    file_put_contents(DOSSIER_DATA,$donneesFinal);
+    }
 
 

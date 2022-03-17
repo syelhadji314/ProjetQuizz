@@ -1,32 +1,18 @@
-<div class="quiz-conteneur" id="quiz">
-<div class="quiz header">
-                <h2 id="question">Question Text</h2>
-                <ul>
-                    <li>
-                        <input type="radio" name="reponse" class="reponse" id="a">
-                        <label for="a" id="reponse_a">reponse</label>
-                    </li>
+<div class="liste_question" id="listeQuestions">
+    <table>
+        <?php foreach ($donnees as $valeur):?>
+            <tr>
+                <th><?= $valeur['question']?><br></th>
+            </tr>
 
-                    <li>
-                        <input type="checkbox" name="reponse" class="reponse" id="b">
-                        <label for="b" id="reponse_b">reponse</label>
-                    </li>
-
-
-                    <li>
-                        <input type="radio" name="reponse" class="reponse" id="c">
-                        <label for="c" id="reponse_c">reponse</label>
-                    </li>
-
-
-                    <li>
-                        <input type="radio" name="reponse" class="reponse" id="d">
-                        <label for="d" id="reponse_d">reponse</label>
-                    </li>
-                </ul>
-            </div>
-            <!-- ****************************************************************** -->
-            <button id="submit">Suivant</button>
+            <td>
+                <?php foreach ($valeur['reponse'] as $valeurrep):?>
+                    <?= $valeurrep?><br>
+                <?php endforeach ?>
+            </td>
+        <?php endforeach ?>
+    </table>
 </div>
 
-<script src="<?= DOSSIER_PUBLIC."js".DIRECTORY_SEPARATOR."listeDesQuestions.js"?>"></script>
+
+<!-- <script src="<?= DOSSIER_PUBLIC."js".DIRECTORY_SEPARATOR."listeDesQuestions.js"?>"></script> -->

@@ -3,21 +3,24 @@
 require_once(DOSSIER_SRC."models".DIRECTORY_SEPARATOR."user.model.php" );
 
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
-  echo "<pre>";
-var_dump($_POST);die;
-   echo "</pre>";
+//   echo "<pre>";
+// var_dump($_POST);die;
+//    echo "</pre>";
 
     if(isset($_REQUEST["action"])){
       $reponses=[];
         $question=$_POST['question'];
         $nbrePoint=$_POST['nbrePoint'];
         $type=$_POST['type'];
+        $reponses=$_POST['text'];
+        // $reponses1=$_POST['text1'];
         $reponsesCorrect=$_POST['rep'];
+
         
 
-        echo "<pre>";
-        var_dump($_POST);die;
-           echo "</pre>";
+        // echo "<pre>";
+        // var_dump($_POST);die;
+        //    echo "</pre>";
 
         switch ($_REQUEST["action"]) {
             
@@ -57,7 +60,11 @@ function creer_Question($question,$nbrePoint){
     champ_obligatoire('nbrePoint',$nbrePoint,$errors,"Veuillez saisir le nombe de point");
     
     if(!empty($question) && !empty($nbrePoint)){
+
+        $result=RecupQuestion();
+        tableau_en_chaine_question('questions',$result);
         
+        // die("ok");
         ob_start();
         require_once(DOSSIER_TEMPLATES."question".DIRECTORY_SEPARATOR."creeQuestion.html.php");
         $contenu_vues=ob_get_clean();

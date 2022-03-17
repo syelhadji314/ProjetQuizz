@@ -12,30 +12,12 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
             $prenom=strip_tags(trim($_POST['prenom']));
             $nom=strip_tags(trim($_POST['nom']));
             $password2=strip_tags(trim($_POST['password2']));
-            if(is_connect()){
-                $profil='PROFIL_ADMIN';
-            }else{
-                $profil='PROFIL_JOUEUR';
-            }
-            // $profil=strtolower($_SESSION['user']['profil']);
-            /************upload_image********************* */
-            
-            $tmp=$_FILES['file']["tmp_name"];
-            $photo=$_FILES['file']["name"]; //renomer
-            $recupmail=explode('@',$login);
-            $recupmail=strtolower($recupmail[0]);
-            $recupmail=$recupmail."_".$profil;
-            $recup = explode('.',$photo );
-            $ext=strtolower(end($recup));
-            $nameImg=$recupmail.".".$ext;
-            $mes_ext=['jpg','png','jpeg','gif'];
-            $chemin=RACINE."public".DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR.$recupmail.".".$ext;
-            move_uploaded_file($tmp,$chemin);
-
-            // var_dump($chemin);die;
-        
-            // uploadImage($file='file');
-
+            $_FILES['monfichier']['name'];
+            $photo=$_FILES['monfichier'];
+            $chemin=RACINE."public".DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR.$_FILES['monfichier']['name'];
+            // *****************************
+            photoProfile($photo,$chemin);
+            // ************************************
             switch ($_REQUEST["action"]) {
             case 'connexion':
                 connexion($login,$password);
@@ -175,7 +157,7 @@ function inscription(string $nom,string $prenom, string $login, string $password
         } 
     }
 }
-
+// *******************************************************************
 function uploadImage($file='file'){
     $photo=$_FILES['file']["name"]."profile";
     $tmp=$_FILES['file']["tmp_name"];
@@ -213,3 +195,27 @@ function uploadImage($file='file'){
     }
 }
 
+// **********************************************************
+
+// *************************Fonction telechargement d'image*********************************
+function photoProfile($photo,$chemin){
+    if (isset($photo))
+{
+// Testons si le fichier n’est pas trop gros
+if ($photo['size'] <= 1000000)
+
+{
+// Testons si l’extension est autorisée
+$infosfichier = pathinfo($photo['name']);
+$extension_upload = $infosfichier['extension'];
+$extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
+if (in_array($extension_upload, $extensions_autorisees))
+{
+// On peut valider le fichier et le stocker
+
+move_uploaded_file($photo['tmp_name'],$chemin);
+// echo "L’envoi a bien été effectué !";
+}
+}
+}
+}
